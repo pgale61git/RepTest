@@ -64,14 +64,14 @@ gen() {
     case $tbl in
         customers)
             if [ "$op" = I ]; then
-                echo "insert into customers values($((20000000 + EXEC)),1,'A','B',1,1,current_date,current_timestamp,'Y');\p\g"
+                echo "insert into customers values($((20000000 + EXEC)),1,'A','B',1,1,'today','now','Y');\p\g"
             else
                 echo "update customers set balance=balance+1 where customer_id=$((RANDOM % 10000 + 1));\p\g"
             fi
             ;;
         orders)
             if [ "$op" = I ]; then
-                echo "insert into orders values($((20000000 + EXEC)),1,current_date,current_timestamp,'NEW',1);\p\g"
+                echo "insert into orders values($((20000000 + EXEC)),1,'today','now','NEW',1);\p\g"
             else
                 echo "update orders set total_amount=total_amount+1 where order_id=$((RANDOM % 100000 + 1));\p\g"
             fi
@@ -83,7 +83,7 @@ gen() {
             echo "update products set unit_price=unit_price+1 where product_id=$((RANDOM % 5000 + 1));\p\g"
             ;;
         datatype_test)
-            echo "update datatype_test set c_integer=c_integer+1,c_timestamp=current_timestamp where test_id=$((RANDOM % 20000 + 1));\p\g"
+            echo "update datatype_test set c_integer=c_integer+1,c_timestamp='now' where test_id=$((RANDOM % 20000 + 1));\p\g"
             ;;
         *)
             echo "update $tbl set rowid=rowid where 1=0;\p\g"

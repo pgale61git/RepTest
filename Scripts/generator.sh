@@ -1,64 +1,68 @@
 #!/bin/bash
+set -euo pipefail
 
-# Generate seed SQL
-now=$(date '+%Y-%m-%d')
+out_dir="csv"
+mkdir -p "$out_dir"
+rm -f "$out_dir"/*.csv
 
-echo "begin transaction;\p\g"
+today=$(date '+%Y-%m-%d')
+now=$(date '+%Y-%m-%d %H:%M:%S')
 
 for i in $(seq 1 20); do
-    echo "insert into regions values($i,'Region-$i','Y');\p\g"
+    printf '%d,Region-%d,Y\n' "$i" "$i" >> "$out_dir/regions.csv"
 done
 
 for i in $(seq 1 10000); do
-    echo "insert into customers values($i,$((RANDOM % 20 + 1)),'First$i','Last$i',1000.00,100.00,date('$now'),current_timestamp,'Y');\p\g"
+    printf '%d,%d,First%d,Last%d,1000.00,100.00,%s,%s,Y\n' "$i" "$((RANDOM % 20 + 1))" "$i" "$i" "$today" "$now" >> "$out_dir/customers.csv"
 done
 
 for i in $(seq 1 50000); do
-    echo "insert into customer_notes values($i,$((RANDOM % 10000 + 1)),'Note $i',current_timestamp);\p\g"
+    printf '%d,%d,Note %d,%s\n' "$i" "$((RANDOM % 10000 + 1))" "$i" "$now" >> "$out_dir/customer_notes.csv"
 done
 
 for i in $(seq 1 5000); do
-    echo "insert into products values($i,'SKU$i','Product-$i',9.99,1.5,'Y');\p\g"
+    printf '%d,SKU%d,Product-%d,9.99,1.5,Y\n' "$i" "$i" "$i" >> "$out_dir/products.csv"
 done
 
 for i in $(seq 1 20); do
-    echo "insert into warehouses values($i,'Warehouse-$i','LOC$i');\p\g"
+    printf '%d,Warehouse-%d,LOC%d\n' "$i" "$i" "$i" >> "$out_dir/warehouses.csv"
 done
 
 for i in $(seq 1 20000); do
-    echo "insert into inventory values($i,$((RANDOM % 20 + 1)),$((RANDOM % 5000 + 1)),100,10);\p\g"
+    printf '%d,%d,%d,100,10\n' "$i" "$((RANDOM % 20 + 1))" "$((RANDOM % 5000 + 1))" >> "$out_dir/inventory.csv"
 done
 
 for i in $(seq 1 100000); do
-    echo "insert into orders values($i,$((RANDOM % 10000 + 1)),current_date,current_timestamp,'NEW',99.99);\p\g"
+    printf '%d,%d,%s,%s,NEW,99.99\n' "$i" "$((RANDOM % 10000 + 1))" "$today" "$now" >> "$out_dir/orders.csv"
 done
 
 for i in $(seq 1 300000); do
-    echo "insert into order_items values($i,$((RANDOM % 100000 + 1)),$((RANDOM % 5000 + 1)),1,9.99);\p\g"
+    printf '%d,%d,%d,1,9.99\n' "$i" "$((RANDOM % 100000 + 1))" "$((RANDOM % 5000 + 1))" >> "$out_dir/order_items.csv"
 done
 
 for i in $(seq 1 50000); do
-    echo "insert into shipments values($i,$((RANDOM % 100000 + 1)),current_date,'TRK$i');\p\g"
+    printf '%d,%d,%s,TRK%d\n' "$i" "$((RANDOM % 100000 + 1))" "$today" "$i" >> "$out_dir/shipments.csv"
 done
 
 for i in $(seq 1 500); do
-    echo "insert into suppliers values($i,'Supplier-$i',5);\p\g"
+    printf '%d,Supplier-%d,5\n' "$i" "$i" >> "$out_dir/suppliers.csv"
 done
 
 for i in $(seq 1 20000); do
-    echo "insert into purchases values($i,$((RANDOM % 500 + 1)),current_timestamp,100.00);\p\g"
+    printf '%d,%d,%s,100.00\n' "$i" "$((RANDOM % 500 + 1))" "$now" >> "$out_dir/purchases.csv"
 done
 
 for i in $(seq 1 2000); do
-    echo "insert into employees values($i,'Emp$i','Surname$i',50000.00,current_date);\p\g"
+    printf '%d,Emp%d,Surname%d,50000.00,%s\n' "$i" "$i" "$i" "$today" >> "$out_dir/employees.csv"
 done
 
 for i in $(seq 1 100); do
-    echo "insert into config_values values($i,'CFG$i','VALUE$i');\p\g"
+    printf '%d,CFG%d,VALUE%d\n' "$i" "$i" "$i" >> "$out_dir/config_values.csv"
 done
 
 for i in $(seq 1 20000); do
-    echo "insert into datatype_test values($i,'C$i','V$i',1,$i,1.1,2.2,123.456789,current_date,time('12:00:00'),current_timestamp);\p\g"
+    printf '%d,C%d,V%d,%d,%d,1.1,2.2,123.456789,%s,12:00:00,%s\n' "$i" "$i" "$i" "1" "$i" "$today" "$now" >> "$out_dir/datatype_test.csv"
 done
 
-echo 'commit;\p\g'
+printf 'CSV file generation complete. Files written to %s/%s\n' "$PWD" "$out_dir"
+
