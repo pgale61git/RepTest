@@ -1,0 +1,3507 @@
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:08 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=17;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=9;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=6;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=13;
+Executing . . .
+
+(1 row)
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=20;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:08 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:08 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update product set unit_price=unit_price+1 where product_id=3446;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:08 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:08 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=11;
+Executing . . .
+
+(1 row)
+continue
+* update region set upd_col=upd_col+1 where region_id=14;
+Executing . . .
+
+(0 rows)
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=3;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=5;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:08 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:08 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=2;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=14;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=993;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=19;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:08 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:09 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=15;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:09 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:09 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=7206;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=6;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=1363;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:09 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:09 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=12459;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:09 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:09 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update region set upd_col=upd_col+1 where region_id=18;
+Executing . . .
+
+(0 rows)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=938;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=5028;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:09 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:11 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update purchase set upd_col=upd_col+1 where purchase_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=17604;
+Executing . . .
+
+(1 row)
+continue
+* update order set total_amount=total_amount+1 where order_id=30688;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=2;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:11 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:11 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:11 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:11 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=16;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:11 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:11 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=6;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:11 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:11 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=909;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=2;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=15;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=1;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:11 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:11 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:11 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=15;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update order set total_amount=total_amount+1 where order_id=25565;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=20;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=19463;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+insert into customer values(20000048,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:12 2026 +01:00)
+
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=7803;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update customer set balance=balance+1 where customer_id=9406;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order_item set upd_col=upd_col+1 where order_item_id=10;
+Executing . . .
+
+(1 row)
+continue
+* update order set total_amount=total_amount+1 where order_id=24821;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=468;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=3;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update region set upd_col=upd_col+1 where region_id=12;
+Executing . . .
+
+(0 rows)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=10;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=10;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=20;
+Executing . . .
+
+(1 row)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=5374;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=12823;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update region set upd_col=upd_col+1 where region_id=14;
+Executing . . .
+
+(0 rows)
+continue
+* update region set upd_col=upd_col+1 where region_id=9;
+Executing . . .
+
+(0 rows)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=14;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=7152;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:12 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=9;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:12 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer set balance=balance+1 where customer_id=7597;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update product set unit_price=unit_price+1 where product_id=4382;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update purchase set upd_col=upd_col+1 where purchase_id=2;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=6;
+Executing . . .
+
+(1 row)
+continue
+* update order set total_amount=total_amount+1 where order_id=19675;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update purchase set upd_col=upd_col+1 where purchase_id=18;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=1;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=3;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=11;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=14;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=2;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=10808;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update config_value set upd_col=upd_col+1 where config_value_id=20;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order set total_amount=total_amount+1 where order_id=31827;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=13;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=8;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=2165;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:13 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=11;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=1502;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=2610;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:13 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+insert into order values(20000094,1,'today','now','NEW',1);
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:14 2026 +01:00)
+
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=3732;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=8;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=2;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order set total_amount=total_amount+1 where order_id=24180;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=20;
+Executing . . .
+
+(1 row)
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=4;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=3661;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update region set upd_col=upd_col+1 where region_id=17;
+Executing . . .
+
+(0 rows)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=20;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=20;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=14;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=14;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=10;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update region set upd_col=upd_col+1 where region_id=19;
+Executing . . .
+
+(0 rows)
+continue
+* update customer set balance=balance+1 where customer_id=6781;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:14 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+insert into customer values(20000117,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:14 2026 +01:00)
+
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=13;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:14 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=17144;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=7;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=17;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=646;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=20;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=10;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=63;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update region set upd_col=upd_col+1 where region_id=19;
+Executing . . .
+
+(0 rows)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=14;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=6;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update purchase set upd_col=upd_col+1 where purchase_id=3;
+Executing . . .
+
+(1 row)
+continue
+* update order set total_amount=total_amount+1 where order_id=19412;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=11;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=18;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update purchase set upd_col=upd_col+1 where purchase_id=11;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=4881;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+insert into order values(20000136,1,'today','now','NEW',1);
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:15 2026 +01:00)
+
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=4;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:15 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update config_value set upd_col=upd_col+1 where config_value_id=17;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:15 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update product set unit_price=unit_price+1 where product_id=1930;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=4;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=1;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=18;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=19803;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=2;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=6;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+TXN=50 SQL=147 I=48 U=80 D=19 COM=50 ROL=0 ERR=4
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update config_value set upd_col=upd_col+1 where config_value_id=11;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update config_value set upd_col=upd_col+1 where config_value_id=13;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=15;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update customer set balance=balance+1 where customer_id=6136;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=4600;
+Executing . . .
+
+(1 row)
+continue
+* insert into order values(20000153,1,'today','now','NEW',1);
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:16 2026 +01:00)
+
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=3;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=10473;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=8;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=4;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=17;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:16 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=6;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=9;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=7;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:16 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=20;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=10;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=950;
+Executing . . .
+
+(1 row)
+continue
+* update region set upd_col=upd_col+1 where region_id=14;
+Executing . . .
+
+(0 rows)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=7;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=8;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=8;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=2;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=12;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update product set unit_price=unit_price+1 where product_id=3590;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update region set upd_col=upd_col+1 where region_id=3;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order_item set upd_col=upd_col+1 where order_item_id=13;
+Executing . . .
+
+(1 row)
+continue
+* update region set upd_col=upd_col+1 where region_id=6;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=20;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=11;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order_item set upd_col=upd_col+1 where order_item_id=14;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=2441;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=10472;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=3336;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update product set unit_price=unit_price+1 where product_id=341;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:17 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:17 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update purchase set upd_col=upd_col+1 where purchase_id=5;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=15948;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=18;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=15;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=917;
+Executing . . .
+
+(1 row)
+continue
+* update region set upd_col=upd_col+1 where region_id=2;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=7;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=15;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=4097;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer set balance=balance+1 where customer_id=1637;
+Executing . . .
+
+(1 row)
+continue
+* insert into customer values(20000202,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:18 2026 +01:00)
+
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=15;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=12;
+Executing . . .
+
+(1 row)
+continue
+* insert into customer values(20000206,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:18 2026 +01:00)
+
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=3;
+Executing . . .
+
+(1 row)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=16424;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order set total_amount=total_amount+1 where order_id=20340;
+Executing . . .
+
+(1 row)
+continue
+* update order set total_amount=total_amount+1 where order_id=155;
+Executing . . .
+
+(1 row)
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=20;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=4956;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:18 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=7046;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=12;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:18 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order_item set upd_col=upd_col+1 where order_item_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=2;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=7;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=7;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=15;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=17;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=3144;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=4908;
+Executing . . .
+
+(1 row)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=16106;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=15;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=15;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=13;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=4;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer set balance=balance+1 where customer_id=2086;
+Executing . . .
+
+(1 row)
+continue
+* update region set upd_col=upd_col+1 where region_id=7;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order_item set upd_col=upd_col+1 where order_item_id=7;
+Executing . . .
+
+(1 row)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=6;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=7;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:19 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=5;
+Executing . . .
+
+(1 row)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=1985;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:19 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+insert into customer values(20000243,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:20 2026 +01:00)
+
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=2;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=2;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update product set unit_price=unit_price+1 where product_id=2258;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=9;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=8221;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update order set total_amount=total_amount+1 where order_id=22429;
+Executing . . .
+
+(1 row)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=1;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=19;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:20 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update order set total_amount=total_amount+1 where order_id=3666;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:20 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=19;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=1;
+Executing . . .
+
+(1 row)
+continue
+* update customer set balance=balance+1 where customer_id=818;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* insert into customer values(20000265,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:21 2026 +01:00)
+
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* insert into order values(20000267,1,'today','now','NEW',1);
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:21 2026 +01:00)
+
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update product set unit_price=unit_price+1 where product_id=872;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=11;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update customer set balance=balance+1 where customer_id=8635;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=16;
+Executing . . .
+
+(1 row)
+continue
+* update config_value set upd_col=upd_col+1 where config_value_id=12;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=8976;
+Executing . . .
+
+(1 row)
+continue
+* update region set upd_col=upd_col+1 where region_id=9;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+insert into customer values(20000277,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:21 2026 +01:00)
+
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+TXN=100 SQL=279 I=100 U=137 D=42 COM=100 ROL=0 ERR=11
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update shipment set upd_col=upd_col+1 where shipment_id=2;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=18;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:21 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update inventory set quantity=quantity+1 where inventory_id=9571;
+Executing . . .
+
+(1 row)
+continue
+* update employee set upd_col=upd_col+1 where employee_id=6;
+Executing . . .
+
+(1 row)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=2;
+Executing . . .
+
+(1 row)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=1713;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:21 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update region set upd_col=upd_col+1 where region_id=5;
+Executing . . .
+
+(0 rows)
+continue
+* update purchase set upd_col=upd_col+1 where purchase_id=7;
+Executing . . .
+
+(1 row)
+continue
+* insert into order values(20000288,1,'today','now','NEW',1);
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:22 2026 +01:00)
+
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=8;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=2;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer set balance=balance+1 where customer_id=9135;
+Executing . . .
+
+(1 row)
+continue
+* update product set unit_price=unit_price+1 where product_id=49;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=11;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update product set unit_price=unit_price+1 where product_id=2651;
+Executing . . .
+
+(1 row)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=11648;
+Executing . . .
+
+(1 row)
+continue
+* insert into customer values(20000296,1,'A','B',1,1,'today','now','Y');
+Executing . . .
+
+E_US0AD7 INSERT: number of target columns must equal the number of
+    specified values.
+    (Fri Jul 31 12:04:22 2026 +01:00)
+
+continue
+* update employee set upd_col=upd_col+1 where employee_id=15;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update region set upd_col=upd_col+1 where region_id=17;
+Executing . . .
+
+(0 rows)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=129;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=9571;
+Executing . . .
+
+(1 row)
+continue
+* update inventory set quantity=quantity+1 where inventory_id=11031;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=11384;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update supplier set upd_col=upd_col+1 where supplier_id=12;
+Executing . . .
+
+(1 row)
+continue
+* update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=4910;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer_note set upd_col=upd_col+1 where customer_note_id=19;
+Executing . . .
+
+(1 row)
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=5;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:22 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* update customer_note set upd_col=upd_col+1 where customer_note_id=1;
+Executing . . .
+
+(1 row)
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=20;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:22 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:23 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update employee set upd_col=upd_col+1 where employee_id=9;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=14;
+Executing . . .
+
+(1 row)
+continue
+* update region set upd_col=upd_col+1 where region_id=18;
+Executing . . .
+
+(0 rows)
+continue
+* update order_item set upd_col=upd_col+1 where order_item_id=1;
+Executing . . .
+
+(1 row)
+continue
+* update supplier set upd_col=upd_col+1 where supplier_id=11;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:23 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:23 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update customer set balance=balance+1 where customer_id=5470;
+Executing . . .
+
+(1 row)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:23 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:23 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+update purchase set upd_col=upd_col+1 where purchase_id=11;
+Executing . . .
+
+(1 row)
+continue
+* update shipment set upd_col=upd_col+1 where shipment_id=10;
+Executing . . .
+
+(1 row)
+continue
+* delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:23 2026
+INGRES TERMINAL MONITOR Copyright 2025 Actian Corporation
+Actian Ingres Linux Version II 12.1.0 (a64.lnx/289) login
+Fri Jul 31 12:04:23 2026
+Enter \g to execute commands, "help help\g" for general help,
+"help tm\g" for terminal monitor help, \q to quit
+
+continue
+* * /* SQL Startup File */
+begin transaction;
+delete from customer_note where customer_note_id=0;
+Executing . . .
+
+(0 rows)
+continue
+* commit;
+Executing . . .
+
+continue
+* 
+Actian Ingres Version II 12.1.0 (a64.lnx/289) logout
+Fri Jul 31 12:04:23 2026

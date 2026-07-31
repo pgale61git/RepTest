@@ -2,22 +2,23 @@
 SET NOJOURNALING\p\g
 SET AUTOCOMMIT ON\p\g
 
-DROP TABLE IF EXISTS regions\p\g
+DROP TABLE IF EXISTS region\p\g
 
-CREATE TABLE regions (
+CREATE TABLE region (
     region_id   INTEGER NOT NULL,
     region_name VARCHAR(50),
-    active_flag CHAR(1)
+    active_flag CHAR(1),
+    upd_col     INTEGER
 );
 \p\g
-MODIFY regions to BTREE UNIQUE on region_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE regions ADD CONSTRAINT regions_pk PRIMARY KEY (region_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY regions (region_id=c0comma,region_name=c0comma,active_flag=c0nl) FROM 'csv/regions.csv'\p\g
-SET JOURNALING ON regions\p\g
+MODIFY region to BTREE UNIQUE on region_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE region ADD CONSTRAINT region_pk PRIMARY KEY (region_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY region (region_id=c0comma,region_name=c0comma,active_flag=c0comma,upd_col=c0nl) FROM 'csv/region.csv'\p\g
+SET JOURNALING ON region\p\g
 
-DROP TABLE IF EXISTS customers\p\g
+DROP TABLE IF EXISTS customer\p\g
 
-CREATE TABLE customers (
+CREATE TABLE customer (
     customer_id  INTEGER NOT NULL,
     region_id    INTEGER,
     first_name   VARCHAR(50),
@@ -26,54 +27,58 @@ CREATE TABLE customers (
     balance      DECIMAL(12,2),
     birth_date   DATE,
     created_ts   TIMESTAMP,
-    active_flag  CHAR(1)
+    active_flag  CHAR(1),
+    upd_col      INTEGER
 );
 \p\g
-MODIFY customers to BTREE UNIQUE on customer_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE customers ADD CONSTRAINT customers_pk PRIMARY KEY (customer_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY customers (customer_id=c0comma,region_id=c0comma,first_name=c0comma,last_name=c0comma,credit_limit=c0comma,balance=c0comma,birth_date=c0comma,created_ts=c0comma,active_flag=c0nl) FROM 'csv/customers.csv'\p\g
-SET JOURNALING ON customers\p\g
+MODIFY customer to BTREE UNIQUE on customer_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE customer ADD CONSTRAINT customer_pk PRIMARY KEY (customer_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY customer (customer_id=c0comma,region_id=c0comma,first_name=c0comma,last_name=c0comma,credit_limit=c0comma,balance=c0comma,birth_date=c0comma,created_ts=c0comma,active_flag=c0comma,upd_col=c0nl) FROM 'csv/customer.csv'\p\g
+SET JOURNALING ON customer\p\g
 
-DROP TABLE IF EXISTS customer_notes\p\g
+DROP TABLE IF EXISTS customer_note\p\g
 
-CREATE TABLE customer_notes (
-    note_id    INTEGER NOT NULL,
+CREATE TABLE customer_note (
+    customer_note_id    INTEGER NOT NULL,
     customer_id INTEGER,
     note_text  VARCHAR(500),
-    created_ts TIMESTAMP
+    created_ts TIMESTAMP,
+    upd_col     INTEGER
 );
-MODIFY customer_notes to BTREE UNIQUE on note_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE customer_notes ADD CONSTRAINT customer_notes_pk PRIMARY KEY (note_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY customer_notes (note_id=c0comma,customer_id=c0comma,note_text=c0comma,created_ts=c0nl) FROM 'csv/customer_notes.csv'\p\g
-SET JOURNALING ON customer_notes\p\g
+MODIFY customer_note to BTREE UNIQUE on customer_note_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE customer_note ADD CONSTRAINT customer_note_pk PRIMARY KEY (customer_note_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY customer_note (customer_note_id=c0comma,customer_id=c0comma,note_text=c0comma,created_ts=c0comma,upd_col=c0nl) FROM 'csv/customer_note.csv'\p\g
+SET JOURNALING ON customer_note\p\g
 
-DROP TABLE IF EXISTS products\p\g
+DROP TABLE IF EXISTS product\p\g
 
-CREATE TABLE products (
+CREATE TABLE product (
     product_id   INTEGER NOT NULL,
     sku          CHAR(12),
     product_name VARCHAR(100),
     unit_price   DECIMAL(10,2),
     weight_kg    FLOAT,
-    active_flag  CHAR(1)
+    active_flag  CHAR(1),
+    upd_col      INTEGER
 );
 \p\g
-MODIFY products to BTREE UNIQUE on product_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE products ADD CONSTRAINT products_pk PRIMARY KEY (product_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY products (product_id=c0comma,sku=c0comma,product_name=c0comma,unit_price=c0comma,weight_kg=c0comma,active_flag=c0nl) FROM 'csv/products.csv'\p\g
-SET JOURNALING ON products\p\g
+MODIFY product to BTREE UNIQUE on product_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE product ADD CONSTRAINT product_pk PRIMARY KEY (product_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY product (product_id=c0comma,sku=c0comma,product_name=c0comma,unit_price=c0comma,weight_kg=c0comma,active_flag=c0comma,upd_col=c0nl) FROM 'csv/product.csv'\p\g
+SET JOURNALING ON product\p\g
 
-DROP TABLE IF EXISTS warehouses\p\g
+DROP TABLE IF EXISTS warehouse\p\g
 
-CREATE TABLE warehouses (
+CREATE TABLE warehouse (
     warehouse_id   INTEGER NOT NULL,
     warehouse_name VARCHAR(100),
-    location_code  CHAR(10)
+    location_code  CHAR(10),
+    upd_col        INTEGER
 );
-MODIFY warehouses to BTREE UNIQUE on warehouse_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE warehouses ADD CONSTRAINT warehouses_pk PRIMARY KEY (warehouse_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY warehouses (warehouse_id=c0comma,warehouse_name=c0comma,location_code=c0nl) FROM 'csv/warehouses.csv'\p\g
-SET JOURNALING ON warehouses\p\g
+MODIFY warehouse to BTREE UNIQUE on warehouse_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE warehouse ADD CONSTRAINT warehouse_pk PRIMARY KEY (warehouse_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY warehouse (warehouse_id=c0comma,warehouse_name=c0comma,location_code=c0comma,upd_col=c0nl) FROM 'csv/warehouse.csv'\p\g
+SET JOURNALING ON warehouse\p\g
 
 DROP TABLE IF EXISTS inventory\p\g
 
@@ -82,116 +87,125 @@ CREATE TABLE inventory (
     warehouse_id INTEGER,
     product_id   INTEGER,
     quantity     INTEGER,
-    reorder_level SMALLINT
+    reorder_level SMALLINT,
+    upd_col       INTEGER
 );
 \p\g
 MODIFY inventory to BTREE UNIQUE on inventory_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE inventory ADD CONSTRAINT inventory_pk PRIMARY KEY (inventory_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY inventory (inventory_id=c0comma,warehouse_id=c0comma,product_id=c0comma,quantity=c0comma,reorder_level=c0nl) FROM 'csv/inventory.csv'\p\g
+COPY inventory (inventory_id=c0comma,warehouse_id=c0comma,product_id=c0comma,quantity=c0comma,reorder_level=c0comma,upd_col=c0nl) FROM 'csv/inventory.csv'\p\g
 SET JOURNALING ON inventory\p\g
 
-DROP TABLE IF EXISTS orders\p\g
+DROP TABLE IF EXISTS order\p\g
 
-CREATE TABLE orders (
+CREATE TABLE order (
     order_id     INTEGER NOT NULL,
     customer_id  INTEGER,
     order_date   DATE,
     order_ts     TIMESTAMP,
     order_status VARCHAR(20),
-    total_amount DECIMAL(14,2)
+    total_amount DECIMAL(14,2),
+    upd_col      INTEGER
 );
-MODIFY orders to BTREE UNIQUE on order_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE orders ADD CONSTRAINT orders_pk PRIMARY KEY (order_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY orders (order_id=c0comma,customer_id=c0comma,order_date=c0comma,order_ts=c0comma,order_status=c0comma,total_amount=c0nl) FROM 'csv/orders.csv'\p\g
-SET JOURNALING ON orders\p\g
+MODIFY order to BTREE UNIQUE on order_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE order ADD CONSTRAINT order_pk PRIMARY KEY (order_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY order (order_id=c0comma,customer_id=c0comma,order_date=c0comma,order_ts=c0comma,order_status=c0comma,total_amount=c0comma,upd_col=c0nl) FROM 'csv/order.csv'\p\g
+SET JOURNALING ON order\p\g
 
-DROP TABLE IF EXISTS order_items\p\g
+DROP TABLE IF EXISTS order_item\p\g
 
-CREATE TABLE order_items (
+CREATE TABLE order_item (
     order_item_id INTEGER NOT NULL,
     order_id      INTEGER,
     product_id    INTEGER,
     quantity      SMALLINT,
-    unit_price    DECIMAL(10,2)
+    unit_price    DECIMAL(10,2),
+    upd_col       INTEGER
 );
 \p\g
-MODIFY order_items to BTREE UNIQUE on order_item_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE order_items ADD CONSTRAINT order_items_pk PRIMARY KEY (order_item_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY order_items (order_item_id=c0comma,order_id=c0comma,product_id=c0comma,quantity=c0comma,unit_price=c0nl) FROM 'csv/order_items.csv'\p\g
-SET JOURNALING ON order_items\p\g
+MODIFY order_item to BTREE UNIQUE on order_item_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE order_item ADD CONSTRAINT order_item_pk PRIMARY KEY (order_item_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY order_item (order_item_id=c0comma,order_id=c0comma,product_id=c0comma,quantity=c0comma,unit_price=c0comma,upd_col=c0nl) FROM 'csv/order_item.csv'\p\g
+SET JOURNALING ON order_item\p\g
 
-DROP TABLE IF EXISTS shipments\p\g
+DROP TABLE IF EXISTS shipment\p\g
 
-CREATE TABLE shipments (
+CREATE TABLE shipment (
     shipment_id INTEGER NOT NULL,
     order_id    INTEGER,
     ship_date   DATE,
-    tracking_no VARCHAR(60)
+    tracking_no VARCHAR(60),
+    upd_col      INTEGER
 );
-MODIFY shipments to BTREE UNIQUE on shipment_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE shipments ADD CONSTRAINT shipments_pk PRIMARY KEY (shipment_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY shipments (shipment_id=c0comma,order_id=c0comma,ship_date=c0comma,tracking_no=c0nl) FROM 'csv/shipments.csv'\p\g
-SET JOURNALING ON shipments\p\g
+MODIFY shipment to BTREE UNIQUE on shipment_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE shipment ADD CONSTRAINT shipment_pk PRIMARY KEY (shipment_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY shipment (shipment_id=c0comma,order_id=c0comma,ship_date=c0comma,tracking_no=c0comma,upd_col=c0nl) FROM 'csv/shipment.csv'\p\g
+SET JOURNALING ON shipment\p\g
 
-DROP TABLE IF EXISTS suppliers\p\g
+DROP TABLE IF EXISTS supplier\p\g
 
-CREATE TABLE suppliers (
+CREATE TABLE supplier (
     supplier_id   INTEGER NOT NULL,
     supplier_name VARCHAR(100),
-    rating        SMALLINT
+    rating        SMALLINT,
+    upd_col       INTEGER
 );
 \p\g
-MODIFY suppliers to BTREE UNIQUE on supplier_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE suppliers ADD CONSTRAINT suppliers_pk PRIMARY KEY (supplier_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY suppliers (supplier_id=c0comma,supplier_name=c0comma,rating=c0nl) FROM 'csv/suppliers.csv'\p\g
-SET JOURNALING ON suppliers\p\g
+MODIFY supplier to BTREE UNIQUE on supplier_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE supplier ADD CONSTRAINT supplier_pk PRIMARY KEY (supplier_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY supplier (supplier_id=c0comma,supplier_name=c0comma,rating=c0comma,upd_col=c0nl) FROM 'csv/supplier.csv'\p\g
+SET JOURNALING ON supplier\p\g
 
-DROP TABLE IF EXISTS purchases\p\g
+DROP TABLE IF EXISTS purchase\p\g
 
-CREATE TABLE purchases (
+CREATE TABLE purchase (
     purchase_id    INTEGER NOT NULL,
     supplier_id    INTEGER,
     purchase_ts    TIMESTAMP,
-    purchase_value DECIMAL(14,2)
+    purchase_value DECIMAL(14,2),
+    upd_col        INTEGER
 );
-MODIFY purchases to BTREE UNIQUE on purchase_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE purchases ADD CONSTRAINT purchases_pk PRIMARY KEY (purchase_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY purchases (purchase_id=c0comma,supplier_id=c0comma,purchase_ts=c0comma,purchase_value=c0nl) FROM 'csv/purchases.csv'\p\g
-SET JOURNALING ON purchases\p\g
+MODIFY purchase to BTREE UNIQUE on purchase_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE purchase ADD CONSTRAINT purchase_pk PRIMARY KEY (purchase_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY purchase (purchase_id=c0comma,supplier_id=c0comma,purchase_ts=c0comma,purchase_value=c0comma,upd_col=c0nl) FROM 'csv/purchase.csv'\p\g
+SET JOURNALING ON purchase\p\g
 
-DROP TABLE IF EXISTS employees\p\g
+DROP TABLE IF EXISTS employee\p\g
 
-CREATE TABLE employees (
+CREATE TABLE employee (
     employee_id INTEGER NOT NULL,
     first_name  VARCHAR(50),
     surname     VARCHAR(50),
     salary      DECIMAL(12,2),
-    hire_date   DATE
+    hire_date   DATE,
+    upd_col     INTEGER
 );
 \p\g
-MODIFY employees to BTREE UNIQUE on employee_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE employees ADD CONSTRAINT employees_pk PRIMARY KEY (employee_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY employees (employee_id=c0comma,first_name=c0comma,surname=c0comma,salary=c0comma,hire_date=c0nl) FROM 'csv/employees.csv'\p\g
-SET JOURNALING ON employees\p\g
+MODIFY employee to BTREE UNIQUE on employee_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE employee ADD CONSTRAINT employee_pk PRIMARY KEY (employee_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY employee (employee_id=c0comma,first_name=c0comma,surname=c0comma,salary=c0comma,hire_date=c0comma,upd_col=c0nl) FROM 'csv/employee.csv'\p\g
+SET JOURNALING ON employee\p\g
 
-DROP TABLE IF EXISTS config_values\p\g
+DROP TABLE IF EXISTS config_value\p\g
 
-CREATE TABLE config_values (
-    config_id    INTEGER NOT NULL,
+CREATE TABLE config_value (
+    config_value_id    INTEGER NOT NULL,
     config_name  VARCHAR(100),
-    config_value VARCHAR(500)
+    config_value VARCHAR(500),
+    upd_col      INTEGER
 );
-MODIFY config_values to BTREE UNIQUE on config_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE config_values ADD CONSTRAINT config_values_pk PRIMARY KEY (config_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY config_values (config_id=c0comma,config_name=c0comma,config_value=c0nl) FROM 'csv/config_values.csv'\p\g
-SET JOURNALING ON config_values\p\g
+MODIFY config_value to BTREE UNIQUE on config_value_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE config_value ADD CONSTRAINT config_value_pk PRIMARY KEY (config_value_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY config_value (config_value_id=c0comma,config_name=c0comma,config_value=c0comma,upd_col=c0nl) FROM 'csv/config_value.csv'\p\g
+SET JOURNALING ON config_value\p\g
 
 DROP TABLE IF EXISTS binary_test\p\g
 
 CREATE TABLE binary_test (
     binary_id     INTEGER NOT NULL,
     fixed_data    BYTE(64),
-    variable_data BYTE VARYING(256)
+    variable_data BYTE VARYING(256),
+    upd_col       INTEGER
 );
 \p\g
 MODIFY binary_test to BTREE UNIQUE on binary_id WITH UNIQUE_SCOPE=statement\p\g
@@ -201,7 +215,7 @@ SET JOURNALING ON binary_test\p\g
 DROP TABLE IF EXISTS datatype_test\p\g
 
 CREATE TABLE datatype_test (
-    test_id     INTEGER NOT NULL,
+    datatype_test_id     INTEGER NOT NULL,
     c_char      CHAR(20),
     c_varchar   VARCHAR(200),
     c_smallint  SMALLINT,
@@ -211,12 +225,13 @@ CREATE TABLE datatype_test (
     c_decimal   DECIMAL(18,6),
     c_date      DATE,
     c_time      TIME,
-    c_timestamp TIMESTAMP
+    c_timestamp TIMESTAMP,
+    upd_col     INTEGER
 );
 \p\g
-MODIFY datatype_test to BTREE UNIQUE on test_id WITH UNIQUE_SCOPE=statement\p\g
-ALTER TABLE datatype_test ADD CONSTRAINT datatype_test_pk PRIMARY KEY (test_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
-COPY datatype_test (test_id=c0comma,c_char=c0comma,c_varchar=c0comma,c_smallint=c0comma,c_integer=c0comma,c_float=c0comma,c_real=c0comma,c_decimal=c0comma,c_date=c0comma,c_time=c0comma,c_timestamp=c0nl) FROM 'csv/datatype_test.csv'\p\g
+MODIFY datatype_test to BTREE UNIQUE on datatype_test_id WITH UNIQUE_SCOPE=statement\p\g
+ALTER TABLE datatype_test ADD CONSTRAINT datatype_test_pk PRIMARY KEY (datatype_test_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
+COPY datatype_test (datatype_test_id=c0comma,c_char=c0comma,c_varchar=c0comma,c_smallint=c0comma,c_integer=c0comma,c_float=c0comma,c_real=c0comma,c_decimal=c0comma,c_date=c0comma,c_time=c0comma,c_timestamp=c0comma,upd_col=c0nl) FROM 'csv/datatype_test.csv'\p\g
 SET JOURNALING ON datatype_test\p\g
 
 DROP TABLE IF EXISTS workload_log\p\g
@@ -230,7 +245,8 @@ CREATE TABLE workload_log (
     pk_value       VARCHAR(100),
     commit_flag    CHAR(1),
     status         VARCHAR(20),
-    error_text     VARCHAR(255)
+    error_text     VARCHAR(255),
+    upd_col        INTEGER
 );
 \p\g
 MODIFY workload_log to BTREE UNIQUE on log_id WITH UNIQUE_SCOPE=statement\p\g
