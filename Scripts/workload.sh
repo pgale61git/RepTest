@@ -1,8 +1,15 @@
 #!/bin/bash
 
+# This script generates a workload against an Ingres database. 
+# It randomly performs inserts, updates, and deletes on various tables in the database. 
+# The workload can be customized using command-line options.
+
+
+
 DB=''
 SPM=1000
 MINUTES=10
+TGT=""
 I=35
 U=50
 D=15
@@ -10,8 +17,9 @@ R=10
 F=1
 T=5
 
-while getopts d:s:m:i:u:x:r:f:t:h o; do
+while getopts c:d:s:m:i:u:x:r:f:t:h o; do
     case $o in
+        c) TGT=$OPTARG ;;        # Target db - if provided script will check for success of replication.
         d) DB=$OPTARG ;;        # Database name
         s) SPM=$OPTARG ;;       # SQL statements per minute. Very approx. Sets the delay between transactions.
         m) MINUTES=$OPTARG ;;   # Number of minutes to run the workload
@@ -53,6 +61,10 @@ COM=0
 ROL=0
 ERR=0
 TXNS=0
+TBL=""
+KEY=""
+SQL=""
+WHERE=""
 
 rows[customer]=10000
 rows[customer_note]=50000
@@ -96,29 +108,53 @@ gen() {
     case $tbl in
         customer)
             if [ "$op" = I ]; then
-                echo "insert into customer values($((20000000 + EXEC)),1,'A','B',1,1,'today','now','Y',0);\p\g"
+                TBL=customer
+                KEY=$((20000000 + EXEC))
+                WHERE="customer_id=$KEY"
+                SQL="insert into customer values($KEY,1,'A','B',1,1,'today','now','Y',0);\p\g"
             else
-                echo "update customer set balance=balance+1 where customer_id=$((RANDOM % 10000 + 1));\p\g"
+                TBL=customer
+                KEY=$((RANDOM % 10000 + 1))
+                WHERE="customer_id=$KEY"
+                SQL="update customer set balance=balance+1 where customer_id=$KEY;\p\g"
             fi
             ;;
         order)
             if [ "$op" = I ]; then
-                echo "insert into order values($((20000000 + EXEC)),1,'today','now','NEW',1,0);\p\g"
+                TBL=order
+                KEY=$((20000000 + EXEC))
+                WHERE="order_id=$KEY"
+                SQL="insert into order values($KEY,1,'today','now','NEW',1,0);\p\g"
             else
-                echo "update order set total_amount=total_amount+1 where order_id=$((RANDOM % 100000 + 1));\p\g"
+                TBL=order
+                KEY=$((RANDOM % 100000 + 1))
+                WHERE="order_id=$KEY"
+                SQL="update order set total_amount=total_amount+1 where order_id=$KEY;\p\g"
             fi
             ;;
         inventory)
-            echo "update inventory set quantity=quantity+1 where inventory_id=$((RANDOM % 20000 + 1));\p\g"
+            TBL=inventory
+            KEY=$((RANDOM % 20000 + 1))
+            WHERE="inventory_id=$KEY"
+            SQL="update inventory set quantity=quantity+1 where inventory_id=$KEY;\p\g"
             ;;
         product)
-            echo "update product set unit_price=unit_price+1 where product_id=$((RANDOM % 5000 + 1));\p\g"
+            TBL=product
+            KEY=$((RANDOM % 5000 + 1))
+            WHERE="product_id=$KEY"
+            SQL="update product set unit_price=unit_price+1 where product_id=$KEY;\p\g"
             ;;
         datatype_test)
-            echo "update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=$((RANDOM % 20000 + 1));\p\g"
+            TBL=datatype_test
+            KEY=$((RANDOM % 20000 + 1))
+            WHERE="datatype_test_id=$KEY"
+            SQL="update datatype_test set c_integer=c_integer+1,c_timestamp='now' where datatype_test_id=$KEY;\p\g"
             ;;
         *)
-            echo "update $tbl set upd_col=upd_col+1 where ${tbl}_id=$((RANDOM % ${rows[$tbl]} + 1));\p\g"
+            TBL=$tbl
+            KEY=$((RANDOM % ${rows[$tbl]} + 1))
+            WHERE="${tbl}_id=$KEY"
+            SQL="update $tbl set upd_col=upd_col+1 where ${tbl}_id=$KEY;\p\g"
             ;;
     esac
 }
@@ -126,7 +162,7 @@ gen() {
 start=$(date +%s)
 end=$((start + MINUTES * 60))
 
-echo "$(date +'%H:%M:%S') STARTING WORKLOAD: DB=$DB SPM=$SPM MINUTES=$MINUTES I=$I U=$U D=$D R=$R F=$F T=$T DELAY=$DELAY" | tee -a "$LOG"
+echo "$(date +'%H:%M:%S') STARTING WORKLOAD: DB=$DB TGT=$TGT SPM=$SPM MINUTES=$MINUTES I=$I U=$U D=$D R=$R F=$F T=$T DELAY=$DELAY" | tee -a "$LOG"
 echo LOG=$LOG
 
 while [ "$(date +%s)" -lt "$end" ]; do
@@ -139,22 +175,27 @@ while [ "$(date +%s)" -lt "$end" ]; do
         p=$((RANDOM % 100))
 
         if [ "$p" -lt "$I" ]; then
-            sql=$(gen I)
+            gen I
             INS=$((INS + 1))
         elif [ "$p" -lt $((I + U)) ]; then
-            sql=$(gen U)
+            gen U
             UPD=$((UPD + 1))
         else
-            sql='delete from customer_note where customer_note_id=0;\p\g'
+            KEY=$((RANDOM % 50000 + 1))
+            WHERE="customer_note_id=$KEY"
+            SQL="delete from customer_note where customer_note_id=$KEY;\p\g"
             DELC=$((DELC + 1))
         fi
 
-        echo "$sql" >> "$tmp"
+        echo "$SQL" >> "$tmp"
         EXEC=$((EXEC + 1))
     done
 
     if [ $((RANDOM % 100)) -lt "$F" ]; then
-        echo "update customer set active_flag='Y' where customer_id=$((RANDOM % 10000 + 1));\p\g" >> "$tmp"
+        KEY=$((RANDOM % 10000 + 1))
+        WHERE="customer_id=$KEY"
+        SQL="update customer set active_flag='Y' where customer_id=$KEY;\p\g"
+        echo "$SQL" >> "$tmp"
         UPD=$((UPD + 1))
     fi
 
@@ -184,4 +225,32 @@ while [ "$(date +%s)" -lt "$end" ]; do
     sleep "$DELAY"
 done
 
-echo "$(date +'%H:%M:%S') COMPLETE TXN=$TXNS SQL=$EXEC" | tee -a "$LOG"
+echo "$(date +'%H:%M:%S') COMPLETE TXN=$TXNS SQL=$EXEC LAST SQL=$SQL" | tee -a "$LOG"
+
+if [ -n "$TGT" ]; then
+    echo "Checking replication to $TGT by examining result of last SQL statement executed on $DB"
+    SEL="SELECT * FROM $TBL WHERE $WHERE\p\g"
+    echo "SELECT statement to check replication: $SEL"
+    while true
+    do
+        echo "Source : $DB"
+        sql -S "$DB" << ! | tee /var/tmp/src_result.txt
+        \vert
+        $SEL
+!
+
+        sql -S "$TGT" << ! | tee /var/tmp/tgt_result.txt
+        \vert
+        $SEL
+!
+        diff /var/tmp/src_result.txt /var/tmp/tgt_result.txt
+        if [ $? -eq 0 ]; then
+            echo "Replication check PASSED"
+            break
+        else
+            echo "Replication check FAILED"
+            sleep 5
+        fi
+    done
+fi
+
