@@ -45,7 +45,7 @@ INSERT INTO all_datatypes_test VALUES
     'KEY00001',
     '192.168.1.11',
     '2001:db8:1::11',
-    UUID(),
+    UUID('00112233-4455-6677-8899-aabbccddeeff'),
 
     X'0102030405',
     X'1112131415',
