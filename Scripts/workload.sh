@@ -16,8 +16,9 @@ D=15
 R=10
 F=1
 T=5
+USER=""
 
-while getopts c:d:s:m:i:u:x:r:f:t:h o; do
+while getopts c:d:s:m:i:u:x:r:f:t:U:h o; do
     case $o in
         c) TGT=$OPTARG ;;        # Target db - if provided script will check for success of replication.
         d) DB=$OPTARG ;;        # Database name
@@ -43,6 +44,7 @@ while getopts c:d:s:m:i:u:x:r:f:t:h o; do
            echo "  -t T      Maximum number of SQL statements per transaction" >&2
            exit 1
            ;;
+        U) USER="-u$OPTARG" ;;      # User name for database connection
         *) echo "Invalid option: -$OPTARG" >&2
            exit 1
            ;;
@@ -181,6 +183,7 @@ while [ "$(date +%s)" -lt "$end" ]; do
             gen U
             UPD=$((UPD + 1))
         else
+            TBL=customer_note
             KEY=$((RANDOM % 50000 + 1))
             WHERE="customer_note_id=$KEY"
             SQL="delete from customer_note where customer_note_id=$KEY;\p\g"
@@ -193,6 +196,7 @@ while [ "$(date +%s)" -lt "$end" ]; do
 
     if [ $((RANDOM % 100)) -lt "$F" ]; then
         KEY=$((RANDOM % 10000 + 1))
+		TBL=customer
         WHERE="customer_id=$KEY"
         SQL="update customer set active_flag='Y' where customer_id=$KEY;\p\g"
         echo "$SQL" >> "$tmp"
@@ -205,7 +209,7 @@ while [ "$(date +%s)" -lt "$end" ]; do
     fi
 
     echo "$outcome;\p\g" >> "$tmp"
-    sql "$DB" < "$tmp" >> "$LOG" 2>&1
+    sql $USER "$DB" < "$tmp" >> "$LOG" 2>&1
     rc=$?
     rm -f "$tmp"
 
@@ -228,28 +232,32 @@ done
 echo "$(date +'%H:%M:%S') COMPLETE TXN=$TXNS SQL=$EXEC LAST SQL=$SQL" | tee -a "$LOG"
 
 if [ -n "$TGT" ]; then
+    echo "==============================="
     echo "Checking replication to $TGT by examining result of last SQL statement executed on $DB"
     SEL="SELECT * FROM $TBL WHERE $WHERE\p\g"
     echo "SELECT statement to check replication: $SEL"
     while true
     do
         echo "Source : $DB"
-        sql -S "$DB" << ! | tee /var/tmp/src_result.txt
+        sql -S $USER "$DB" << ! > /var/tmp/src_result.txt
         \vert
         $SEL
 !
 
-        sql -S "$TGT" << ! | tee /var/tmp/tgt_result.txt
+        sql -S $USER "$TGT" << ! > /var/tmp/tgt_result.txt
         \vert
         $SEL
 !
-        diff /var/tmp/src_result.txt /var/tmp/tgt_result.txt
+        echo "----------------------------------------------------------------"
+        paste /var/tmp/src_result.txt /var/tmp/tgt_result.txt |grep :|grep -v '\*\*'|column -t
+        echo "----------------------------------------------------------------"
+        diff -y --suppress-common-lines /var/tmp/src_result.txt /var/tmp/tgt_result.txt
         if [ $? -eq 0 ]; then
             echo "Replication check PASSED"
             break
         else
             echo "Replication check FAILED"
-            sleep 5
+            sleep 2
         fi
     done
 fi

@@ -4,6 +4,9 @@
 
 SRC=$1
 TGT=$2
+USER=$3
+
+[[ "$USER" != "" ]] && USER="-u$USER"
 
 echo "This will destroy the source and target databases: $SRC and $TGT"
 echo "Are you sure you want to continue? (y/n)"
@@ -13,11 +16,11 @@ if [ "$answer" != "y" ]; then
     exit 1
 fi
 
-destroydb $SRC
-destroydb $TGT
+destroydb $USER $SRC
+destroydb $USER $TGT
 
 for db in $SRC $TGT; do
-    createdb $db
-    sql $db < DDL/schema_ddl.sql
-    ckpdb +j $db
+    createdb $USER $db
+    sql $USER $db < DDL/schema_ddl.sql
+    ckpdb $USER +j $db
 done

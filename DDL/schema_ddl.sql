@@ -15,6 +15,7 @@ MODIFY region to BTREE UNIQUE on region_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE region ADD CONSTRAINT region_pk PRIMARY KEY (region_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY region (region_id=c0comma,region_name=c0comma,active_flag=c0comma,upd_col=c0nl) FROM 'csv/region.csv'\p\g
 SET JOURNALING ON region\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE region TO rep_user\p\g
 
 DROP TABLE IF EXISTS customer\p\g
 
@@ -35,6 +36,7 @@ MODIFY customer to BTREE UNIQUE on customer_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE customer ADD CONSTRAINT customer_pk PRIMARY KEY (customer_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY customer (customer_id=c0comma,region_id=c0comma,first_name=c0comma,last_name=c0comma,credit_limit=c0comma,balance=c0comma,birth_date=c0comma,created_ts=c0comma,active_flag=c0comma,upd_col=c0nl) FROM 'csv/customer.csv'\p\g
 SET JOURNALING ON customer\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE customer TO rep_user\p\g
 
 DROP TABLE IF EXISTS customer_note\p\g
 
@@ -49,6 +51,7 @@ MODIFY customer_note to BTREE UNIQUE on customer_note_id WITH UNIQUE_SCOPE=state
 ALTER TABLE customer_note ADD CONSTRAINT customer_note_pk PRIMARY KEY (customer_note_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY customer_note (customer_note_id=c0comma,customer_id=c0comma,note_text=c0comma,created_ts=c0comma,upd_col=c0nl) FROM 'csv/customer_note.csv'\p\g
 SET JOURNALING ON customer_note\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE customer_note TO rep_user\p\g
 
 DROP TABLE IF EXISTS product\p\g
 
@@ -66,6 +69,7 @@ MODIFY product to BTREE UNIQUE on product_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE product ADD CONSTRAINT product_pk PRIMARY KEY (product_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY product (product_id=c0comma,sku=c0comma,product_name=c0comma,unit_price=c0comma,weight_kg=c0comma,active_flag=c0comma,upd_col=c0nl) FROM 'csv/product.csv'\p\g
 SET JOURNALING ON product\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE product TO rep_user\p\g
 
 DROP TABLE IF EXISTS warehouse\p\g
 
@@ -79,6 +83,7 @@ MODIFY warehouse to BTREE UNIQUE on warehouse_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE warehouse ADD CONSTRAINT warehouse_pk PRIMARY KEY (warehouse_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY warehouse (warehouse_id=c0comma,warehouse_name=c0comma,location_code=c0comma,upd_col=c0nl) FROM 'csv/warehouse.csv'\p\g
 SET JOURNALING ON warehouse\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE warehouse TO rep_user\p\g
 
 DROP TABLE IF EXISTS inventory\p\g
 
@@ -95,6 +100,7 @@ MODIFY inventory to BTREE UNIQUE on inventory_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE inventory ADD CONSTRAINT inventory_pk PRIMARY KEY (inventory_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY inventory (inventory_id=c0comma,warehouse_id=c0comma,product_id=c0comma,quantity=c0comma,reorder_level=c0comma,upd_col=c0nl) FROM 'csv/inventory.csv'\p\g
 SET JOURNALING ON inventory\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE inventory TO rep_user\p\g
 
 DROP TABLE IF EXISTS order\p\g
 
@@ -111,6 +117,7 @@ MODIFY order to BTREE UNIQUE on order_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE order ADD CONSTRAINT order_pk PRIMARY KEY (order_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY order (order_id=c0comma,customer_id=c0comma,order_date=c0comma,order_ts=c0comma,order_status=c0comma,total_amount=c0comma,upd_col=c0nl) FROM 'csv/order.csv'\p\g
 SET JOURNALING ON order\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE order TO rep_user\p\g
 
 DROP TABLE IF EXISTS order_item\p\g
 
@@ -127,6 +134,7 @@ MODIFY order_item to BTREE UNIQUE on order_item_id WITH UNIQUE_SCOPE=statement\p
 ALTER TABLE order_item ADD CONSTRAINT order_item_pk PRIMARY KEY (order_item_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY order_item (order_item_id=c0comma,order_id=c0comma,product_id=c0comma,quantity=c0comma,unit_price=c0comma,upd_col=c0nl) FROM 'csv/order_item.csv'\p\g
 SET JOURNALING ON order_item\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE order_item TO rep_user\p\g
 
 DROP TABLE IF EXISTS shipment\p\g
 
@@ -141,6 +149,7 @@ MODIFY shipment to BTREE UNIQUE on shipment_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE shipment ADD CONSTRAINT shipment_pk PRIMARY KEY (shipment_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY shipment (shipment_id=c0comma,order_id=c0comma,ship_date=c0comma,tracking_no=c0comma,upd_col=c0nl) FROM 'csv/shipment.csv'\p\g
 SET JOURNALING ON shipment\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE shipment TO rep_user\p\g
 
 DROP TABLE IF EXISTS supplier\p\g
 
@@ -155,6 +164,7 @@ MODIFY supplier to BTREE UNIQUE on supplier_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE supplier ADD CONSTRAINT supplier_pk PRIMARY KEY (supplier_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY supplier (supplier_id=c0comma,supplier_name=c0comma,rating=c0comma,upd_col=c0nl) FROM 'csv/supplier.csv'\p\g
 SET JOURNALING ON supplier\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE supplier TO rep_user\p\g
 
 DROP TABLE IF EXISTS purchase\p\g
 
@@ -169,6 +179,7 @@ MODIFY purchase to BTREE UNIQUE on purchase_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE purchase ADD CONSTRAINT purchase_pk PRIMARY KEY (purchase_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY purchase (purchase_id=c0comma,supplier_id=c0comma,purchase_ts=c0comma,purchase_value=c0comma,upd_col=c0nl) FROM 'csv/purchase.csv'\p\g
 SET JOURNALING ON purchase\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE purchase TO rep_user\p\g
 
 DROP TABLE IF EXISTS employee\p\g
 
@@ -185,6 +196,7 @@ MODIFY employee to BTREE UNIQUE on employee_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE employee ADD CONSTRAINT employee_pk PRIMARY KEY (employee_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY employee (employee_id=c0comma,first_name=c0comma,surname=c0comma,salary=c0comma,hire_date=c0comma,upd_col=c0nl) FROM 'csv/employee.csv'\p\g
 SET JOURNALING ON employee\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE employee TO rep_user\p\g
 
 DROP TABLE IF EXISTS config_value\p\g
 
@@ -198,6 +210,7 @@ MODIFY config_value to BTREE UNIQUE on config_value_id WITH UNIQUE_SCOPE=stateme
 ALTER TABLE config_value ADD CONSTRAINT config_value_pk PRIMARY KEY (config_value_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY config_value (config_value_id=c0comma,config_name=c0comma,config_value=c0comma,upd_col=c0nl) FROM 'csv/config_value.csv'\p\g
 SET JOURNALING ON config_value\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE config_value TO rep_user\p\g
 
 DROP TABLE IF EXISTS binary_test\p\g
 
@@ -211,6 +224,7 @@ CREATE TABLE binary_test (
 MODIFY binary_test to BTREE UNIQUE on binary_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE binary_test ADD CONSTRAINT binary_test_pk PRIMARY KEY (binary_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 SET JOURNALING ON binary_test\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE binary_test TO rep_user\p\g
 
 DROP TABLE IF EXISTS datatype_test\p\g
 
@@ -233,6 +247,7 @@ MODIFY datatype_test to BTREE UNIQUE on datatype_test_id WITH UNIQUE_SCOPE=state
 ALTER TABLE datatype_test ADD CONSTRAINT datatype_test_pk PRIMARY KEY (datatype_test_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 COPY datatype_test (datatype_test_id=c0comma,c_char=c0comma,c_varchar=c0comma,c_smallint=c0comma,c_integer=c0comma,c_float=c0comma,c_real=c0comma,c_decimal=c0comma,c_date=c0comma,c_time=c0comma,c_timestamp=c0comma,upd_col=c0nl) FROM 'csv/datatype_test.csv'\p\g
 SET JOURNALING ON datatype_test\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE datatype_test TO rep_user\p\g
 
 DROP TABLE IF EXISTS workload_log\p\g
 
@@ -252,4 +267,28 @@ CREATE TABLE workload_log (
 MODIFY workload_log to BTREE UNIQUE on log_id WITH UNIQUE_SCOPE=statement\p\g
 ALTER TABLE workload_log ADD CONSTRAINT workload_log_pk PRIMARY KEY (log_id) WITH ( INDEX=BASE TABLE STRUCTURE )\p\g
 SET JOURNALING ON workload_log\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE workload_log TO rep_user\p\g
 
+CREATE TABLE table1 (
+    id      INTEGER      NOT NULL,
+    name    VARCHAR(100) NOT NULL
+) WITH JOURNALING
+\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE table1 TO rep_user\p\g
+
+CREATE TABLE table2 (
+    id           INTEGER      NOT NULL,
+    description  VARCHAR(200) NOT NULL,
+    PRIMARY KEY (id)
+) WITH JOURNALING
+\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE table2 TO rep_user\p\g
+
+CREATE TABLE merged_target (
+    id           INTEGER      NOT NULL,
+    name         VARCHAR(100),   -- nullable, populated from table1
+    description  VARCHAR(200),   -- nullable, populated from table2
+    PRIMARY KEY (id)
+) WITH JOURNALING
+\p\g
+GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE merged_target TO rep_user\p\g
