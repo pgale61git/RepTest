@@ -48,7 +48,6 @@ CREATE TABLE all_data_types (
 
     -- Abstract and network types
     money_col MONEY,
-    logical_key_col LOGICAL_KEY,
     ipv4_col IPV4,
     ipv6_col IPV6,
     uuid_col UUID,
@@ -79,7 +78,7 @@ INSERT INTO all_data_types (
     ansidate_col, time_col, time_tz_col, time_local_tz_col,
     timestamp_col, timestamp_tz_col, timestamp_local_tz_col,
     interval_year_month_col, interval_day_second_col, ingresdate_col, date_col,
-    money_col, logical_key_col, ipv4_col, ipv6_col, uuid_col,
+    money_col, ipv4_col, ipv6_col, uuid_col,
     byte_col, varbyte_col, long_byte_col,
     boolean_col, json_col
 )
