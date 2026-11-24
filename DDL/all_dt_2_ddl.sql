@@ -46,9 +46,13 @@ CREATE TABLE all_datatypes_test
     -- Binary data types
     col_byte          BYTE(10),
     col_varbyte       VARBYTE(20),
-    col_long_byte     LONG BYTE(1000),
+    col_long_byte     LONG BYTE,
+    col_long_byte_inline LONG BYTE(10),
 
     -- Boolean data type
     col_boolean       BOOLEAN
-);
+)
+WITH JOURNALING
+\p\g
+ALTER TABLE all_datatypes_test ADD CONSTRAINT adt_pk PRIMARY KEY (col_char)
 \p\g
