@@ -1,13 +1,17 @@
 
+DROP TABLE IF EXISTS all_datatypes_test;
+\p\g
 CREATE TABLE all_datatypes_test
 (
     -- Character data types
     col_char          CHAR(30),
     col_varchar       VARCHAR(100),
-    col_long_varchar  LONG VARCHAR(1000),
+    col_long_varchar  LONG VARCHAR,
+    col_long_varchar_inline  LONG VARCHAR(10),
     col_nchar         NCHAR(30),
     col_nvarchar      NVARCHAR(100),
-    col_long_nvarchar LONG NVARCHAR(1000),
+    col_long_nvarchar LONG NVARCHAR,
+    col_long_nvarchar_inline LONG NVARCHAR(10),
     col_c             C(30),
     col_text          TEXT(100),
 
@@ -35,7 +39,6 @@ CREATE TABLE all_datatypes_test
 
     -- Abstract data types
     col_money         MONEY,
-    col_logical_key   LOGICAL_KEY NOT SYSTEM_MAINTAINED,
     col_ipv4          IPV4,
     col_ipv6          IPV6,
     col_uuid          UUID,
